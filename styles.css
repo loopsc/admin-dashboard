@@ -144,25 +144,28 @@ button {
 }
 
 .icon {
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
     filter: invert(1) grayscale(100%) contrast(100%);
 }
 
 .logo-icon {
-    width: 4em;
-    height: 4em;
+    width: 4rem;
+    height: 4rem;
     filter: invert(1) grayscale(100%) contrast(100%);
 }
 
 .logo-text,
 .dash-text {
     color: white;
-    font-size: 24px;
+    /* font-size: 20px; */
+    font-size: calc(16px + 0.5vw);
 }
 
 .logo-text {
-    font-size: 36px;
+    /* font-size: 36px; */
+    font-size: 2vw;
+    font-size: calc(24px + 0.5vw);
 }
 
 .navigation {
@@ -176,7 +179,7 @@ button {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    gap: 30px;
+    gap: 1.5vw;
     padding: 0 12px;
 }
 
@@ -189,9 +192,8 @@ button {
 
 .projects {
     grid-row: 2 / 3;
-    grid-column: 2 / 3;
+    grid-column: 2 / 3; 
     padding: 24px;
-    border: 1px solid black;
 }
 
 .card-container {
@@ -199,14 +201,45 @@ button {
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: repeat(2, minmax(350px, 40%));
+    /* grid-template-columns: repeat(2, clamp(350px,60%, 40%)); */
+    /* grid-template-rows: repeat(auto-fit, minmax(1fr, 250px)); */
     grid-template-rows: repeat(auto-fit, minmax(1fr, 250px));
     gap: 24px;
 }
 
 .project-card {
-    border: 1px solid black;
-    padding: 12px;
+    padding: 24px;
     box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    border: 9px solid white;
+    border-left-color: orange;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.card-title {
+    font-weight: 1000;
+    margin-bottom: 3px;
+    font-size: 17px;
+}
+
+.card-text {
+    color: rgb(100, 100, 100);
+}
+
+.card-icons-container {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.card-icon {
+    width: 2rem;
+    height: 2rem;
 }
 
 .side-content {
