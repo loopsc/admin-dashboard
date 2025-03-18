@@ -188,11 +188,10 @@ button {
 }
 
 /* Projects section */
-/* TODO: style and layout projects */
 
 .projects {
     grid-row: 2 / 3;
-    grid-column: 2 / 3; 
+    grid-column: 2 / 3;
     padding: 24px;
 }
 
@@ -200,9 +199,7 @@ button {
     padding: 24px 0;
     display: grid;
     justify-content: space-evenly;
-    grid-template-columns: repeat(2, minmax(350px, 40%));
-    /* grid-template-columns: repeat(2, clamp(350px,60%, 40%)); */
-    /* grid-template-rows: repeat(auto-fit, minmax(1fr, 250px)); */
+    grid-template-columns: repeat(2, minmax(200px, 40%));
     grid-template-rows: repeat(auto-fit, minmax(1fr, 250px));
     gap: 24px;
 }
@@ -242,9 +239,71 @@ button {
     height: 2rem;
 }
 
+/* Right Side Contents */
+
 .side-content {
     grid-row: 2 / 3;
     grid-column: 3 / 4;
     padding: 12px;
-    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements {
+}
+
+.announcement-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 36px;
+    margin-top: 12px;
+    background-color: white;
+}
+
+.announcement-div > div {
+    padding-bottom: 24px;
+    border-bottom: 1px solid grey;
+}
+
+.announcement-div > div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.announcement-content {
+}
+
+.side-header-text {
+    font-size: 22px;
+}
+
+.announcement-title {
+    font-weight: 600;
+}
+
+.small-side-text {
+    color: rgb(100, 100, 100);
+    font-size: 15px;
+}
+
+.trending {
+    flex: 1;
+    padding-top: 24px;
+}
+
+.trending-accounts {
+    background-color: white;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.account {
+    display: flex;
+    gap: 13px;
+    padding: 12px;
 }
